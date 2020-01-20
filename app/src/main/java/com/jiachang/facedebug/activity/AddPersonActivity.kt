@@ -102,7 +102,7 @@ class AddPersonActivity : Activity() {
             Log.d("","name = "+NameUtil.name)
             Log.d("","id = "+NameUtil.id)
             person =
-                "{\"id\":\"\",\"idcardNum\":\"\",\"name\":\"" + NameUtil.name + "\",\"IDNumber\":\"" + NameUtil.id +
+                "{\"id\":\"\",\"idcardNum\":\"\",\"name\":\"" + edit_name.text.toString() + "\",\"IDNumber\":\"" + id_edit.text.toString() +
                         "\",\"facePermission\":\"2\",\"idCardPermission\":\"\",\"faceAndCardPer mission\":\"\",\"IDPermission\":\"2\"}"
             println("f = "+f+", newpass = "+newpass+", person="+person)
             ApiRetrofit.initRetrofit(baseURL)

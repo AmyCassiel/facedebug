@@ -14,6 +14,8 @@ import androidx.annotation.Nullable;
 import com.jiachang.facedebug.R;
 import com.jiachang.facedebug.http.ApiRetrofit;
 
+import org.jetbrains.annotations.NotNull;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -92,16 +94,16 @@ public class SettingDeviceActivity extends Activity implements View.OnClickListe
                 }
                 ApiRetrofit.initRetrofit(baseURL)
                         .restartDevice(newpass)
-                        .enqueue(new Callback<Response>() {
+                        .enqueue(new Callback<Response<String>>() {
                             @Override
-                            public void onResponse(Call<Response> call, Response<Response> response) {
+                            public void onResponse(Call<Response<String>> call, Response<Response<String>> response) {
                                 if (response.isSuccessful()){
                                     Toast.makeText(SettingDeviceActivity.this,"重启成功",Toast.LENGTH_LONG).show();
                                 }
                             }
 
                             @Override
-                            public void onFailure(Call<Response> call, Throwable t) {
+                            public void onFailure(Call<Response<String>> call, Throwable t) {
                                 Toast.makeText(SettingDeviceActivity.this,t.getMessage(),Toast.LENGTH_LONG).show();
                             }
                         });
@@ -109,16 +111,15 @@ public class SettingDeviceActivity extends Activity implements View.OnClickListe
             case R.id.reset:
                 ApiRetrofit.initRetrofit(baseURL)
                         .reset(newpass,false)
-                        .enqueue(new Callback<Response>() {
+                        .enqueue(new Callback<Response<String>>() {
                             @Override
-                            public void onResponse(Call<Response> call, Response<Response> response) {
+                            public void onResponse(@NotNull Call<Response<String>> call, @NotNull Response<Response<String>> response) {
                                 if (response.isSuccessful()){
                                     Toast.makeText(SettingDeviceActivity.this,"重置成功",Toast.LENGTH_LONG).show();
                                 }
                             }
-
                             @Override
-                            public void onFailure(Call<Response> call, Throwable t) {
+                            public void onFailure(@NotNull Call<Response<String>> call, @NotNull Throwable t) {
                                 Toast.makeText(SettingDeviceActivity.this,t.getMessage(),Toast.LENGTH_LONG).show();
                             }
                         });
@@ -133,9 +134,10 @@ public class SettingDeviceActivity extends Activity implements View.OnClickListe
 //        if (newpass!=null && is_dhcp_mod!= null && baseURL!=null && gateway_value!=null && subnet_mask_value!=null && dns_value!= null) {
             ApiRetrofit.initRetrofit(device_ip_value+":8090")
                     .setNetInfo(newpass, is_dhcp_mod_value, baseURL, gateway_value, subnet_mask_value, dns_value)
-                    .enqueue(new Callback<Response>() {
+                    .enqueue(new Callback<Response<String>>() {
+
                         @Override
-                        public void onResponse(Call<Response> call, Response<Response> response) {
+                        public void onResponse(@NotNull Call<Response<String>> call, @NotNull Response<Response<String>> response) {
                             if (response.isSuccessful()) {
 //                            JSONObject jsonObject = (JSONObject) JSONObject.parse(response.body().toString());
                                 Toast.makeText(SettingDeviceActivity.this, "配置成功，请5秒钟后重启设备", Toast.LENGTH_LONG).show();
@@ -143,7 +145,7 @@ public class SettingDeviceActivity extends Activity implements View.OnClickListe
                         }
 
                         @Override
-                        public void onFailure(Call<Response> call, Throwable t) {
+                        public void onFailure(@NotNull Call<Response<String>> call, @NotNull Throwable t) {
 
                         }
                     });

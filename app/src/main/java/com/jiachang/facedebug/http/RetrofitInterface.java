@@ -36,7 +36,7 @@ public interface RetrofitInterface {
 
     @FormUrlEncoded
     @POST("/setNetInfo")
-    Call<Response> setNetInfo(
+    Call<Response<String>> setNetInfo(
             @Field("pass") String pass,
             @Field("isDHCPMod") int isDHCPMod,
             @Field("ip") String ip,
@@ -47,11 +47,11 @@ public interface RetrofitInterface {
 
     @FormUrlEncoded
     @POST("/restartDevice")
-    Call<Response> restartDevice(@Field("pass")String pass);
+    Call<Response<String>> restartDevice(@Field("pass")String pass);
 
     @FormUrlEncoded
     @POST("/device/reset")
-    Call<Response> reset(
+    Call<Response<String>> reset(
             @Field("pass")String pass,
             @Field("delete")Boolean delete
     );
@@ -76,4 +76,5 @@ public interface RetrofitInterface {
             @Field("pass") String pass,
             @Field("config") String config
     );
+
 }
