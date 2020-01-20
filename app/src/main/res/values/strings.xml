@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">人脸识别配置</string>
+    <string name="device">设备管理</string>
+    <string name="person">人员管理</string>
+    <string name="photo">照 片:</string>
+    <string name="id">人员ID:</string>
+    <string name="name">姓 名 : </string>
+    <string name="commit">提交</string>
+    <string name="id_hint">请输入人员id号</string>
+    <string name="name_hint">请输入姓名</string>
+    <string name="device_manager">设备管理</string>
+    <string name="device_parameter">设备参数</string>
+    <string name="device_ip">设备IP:</string>
+    <string name="subnet_mask">子网掩码:</string>
+    <string name="gateway">网关:</string>
+    <string name="dns">DNS:</string>
+    <string name="dhcp">DHCP:</string>
+    <string name="manual">手动配置模式</string>
+    <string name="dhcp_model">DHCP模式</string>
+    <string name="connect">创建连接</string>
+    <string name="restart">重启设备</string>
+    <string name="setip">设置IP</string>
+    <string name="reset">设备重置</string>
+    <string name="oldpass">原密码:</string>
+    <string name="newpass">新密码:</string>
+    <string name="setpass">设置密码</string>
+    <string name="recognize">识别回调Url</string>
+    <string name="device_heartbeat">设备心跳URL</string>
+    <string name="take_photo">拍照注册URL</string>
+    <string name="start_service">开启监听服务</string>
+    <string name="device_name">设备名称：</string>
+    <string name="modify_the_logo">修改Logo：</string>
+    <string name="home">首页</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+</resources>

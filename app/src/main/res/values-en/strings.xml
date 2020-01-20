@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">FaceDebug</string>
+    <string name="device">deviceManager</string>
+    <string name="person">personManager</string>
+    <string name="photo">Photo:</string>
+    <string name="name">Name:</string>
+    <string name="commit">Commit</string>
+    <string name="id">ID : </string>
+    <string name="id_hint">Please input your number</string>
+    <string name="name_hint">Please input your name</string>
+    <string name="device_manager">Device Manager</string>
+    <string name="device_parameter">Device  Manager</string>
+    <string name="device_ip">Device IP : </string>
+    <string name="subnet_mask">Subnet Mask</string>
+    <string name="gateway">Gateway</string>
+    <string name="dns">DNS</string>
+    <string name="dhcp">DHCP</string>
+    <string name="manual">Manual Configuration Mode</string>
+    <string name="dhcp_model">DHCP Model</string>
+    <string name="connect">Creat Connection</string>
+    <string name="restart">Reboot</string>
+    <string name="setip">Setting IP</string>
+    <string name="reset">Device Reset</string>
+    <string name="oldpass">Old Password</string>
+    <string name="newpass">new Password</string>
+    <string name="setpass">setPassword</string>
+    <string name="recognize">Identify Callback Url</string>
+    <string name="device_heartbeat">Device HeartbeatURL</string>
+    <string name="take_photo">Photo RegisteredURL</string>
+    <string name="start_service">Enable Listening Service</string>
+    <string name="modify_the_logo">Modify the logo:</string>
+    <string name="device_name">Device Name：</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="home">Home</string>
+</resources>
